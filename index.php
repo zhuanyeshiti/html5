@@ -104,6 +104,14 @@
 			}
 
 			var w = window;
+			window.onscroll = function(e) {
+				var si = Math.max(document.body.scrollLeft, document.documentElement.scrollLeft);
+				//var si = document.getElementById("navi").style.left;
+				//document.getElementById("main").innerHTML = "ssssss<br />" + si;
+				//alert(si);
+				var si = si + 233;
+				document.getElementById("main").style.left = si + "px";
+			}
 			/*window.onscroll = function(e) {
 				var si = Math.max(document.body.scrollLeft, document.documentElement.scrollLeft);
 				var si = si + 270;
@@ -120,6 +128,7 @@
 			<li class="list" id="li1" onclick="myclickfunc(this)" onmousemove="mousemove(this)" onmouseout="mouseout(this)">1st list</li>
 			<li class="list" id="li2" onclick="my2ndfunc()" onmousemove="mousemove(this)" onmouseout="mouseout(this)">2en list</li>
 			<li class="list" id="li3" onclick="my3rdfunc()" onmousemove="mousemove(this)" onmouseout="mouseout(this)">3rd list</li>
+			<li class="list" id="li4"><a href="upload.php">upload</a></li>
 			<script type="text/javascript">
 				function myclickfunc(x) {
 					//alert(x.id);
@@ -150,6 +159,7 @@
 					var si = 270;
 					document.getElementById("main").style.left = si + "px";
 				}*/
+				//document.documentElement.style.overflowX = "hidden";
 				document.documentElement.style.overflowX = "hidden";
 				document.documentElement.style.overflowY = "scroll";
 
